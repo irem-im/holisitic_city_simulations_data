@@ -1,1 +1,4 @@
-# holisitic_city_simulations_data
+# City Physiology open framework
+
+- typology.csv
+- interaction.csv
