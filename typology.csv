@@ -1,0 +1,104 @@
+Model;UrbanSim;YADE;WEF at household scale; ArcEGMO-URBAN;VIBe framework;mobility-emission-dispersion framework for individual exposure estimation;Urban form/air quality
+Keywords;metropolitan real estate market, land use, transportation, urban growth, submodels, disaggregated data, ABM;ABM, syntetic population;water, energy, food, waste;"river basin, point sources, water + pollution + meteo
+";syntetic case studies, water, urban form;pollutant exposure, air quality,individual exposure, emission model, traffic model, mobility model, ABM, DTA;urban form, land use-transportation, emissions, air quality, weather, population exposure to pollutants
+Reference papers (Authors, year);Patterson and Bierlaire, 2010. Waddell, 2002;(Monta–ola-Sales, Onggo and Casanovas-Garcia, 2011. Monta–ola-Sales, Casanovas-Garcia, Onggo and Li, 2014);Hussien, Memon and Savic, 2017;Biegel, Schanze and Krebs, 2005;Sitzenfrei, Fach, Kinzel and Rauch, 2010;Gurram, Stuart and Pinjari, 2019;Marquez and Smith, 1999
+Subject;;;;;;;
+Communication Network;;;;;;;
+Water Cycle;;;x;x;x;;
+Energy Cycle;;;x;;;;
+Matter Cycle;;;x;;;;
+Mobility Network;x;;;;;x;x
+Nature;;;;;;;
+Built Domain;x;;;;;;x
+Society;x;x;;;;x;
+Environment;;;;;;x;x
+Structure of the model;;;;;;;
+Deterministic;;;x;x;;;"x (mobility: gravity theory)
+"
+Statistic;x (ABM);x (ABM);;;x (Cellula Automata);x;
+Hybrid;;;;;;;
+Modelling Technique;;;;;;;
+Static;;;;x;;;x (mobility)
+Dynamic;x;x;x;;x;x (ABM);
+Function;;;;;;;
+Projection;x;x;x;x;;x;x (10 a–os)
+Allocation;;;x;;;;
+Derivation;;;x;x;x;x;x (exposure depending on many factors)
+Temporal configuration;;;;;;;
+Real time;;;;;;;
+Long term;x;x;x;x;x;x (a given moment in time);x (10 years)
+Spatial granularity;;;;;;;
+Scale;City scale;Multi-regional;Households;Basin (basically anyone with data);City scale;"
+City scale";City scale
+Resolution;"- gridcells 150 x 150 m
+- population: individual household
+- employment: individual job or establishment
+";Family unit;Indivudual household (a family);ELU (elemental units);20 x 20 m cells;Street level (R-LINE resolution);Mesoscale (from airshed model)
+Data requirements and availability;;;;;;;
+Type of data to be obtained/available;"Disaggregated data:
+- demography
+- transportation
+- jobs
+- land use";"- fertility
+- mortality
+- economic status
+- marital status
+- migration
+- region";"Over 300 variables in total, among them:
+- family size
+- season impact (summer, winter) on water, energy, food consumption
+- household income impact on consumptions";"- urban basin (population, sewer system, installation...)
+- sewer network
+- river network and basin
+- land use (permeability ...)
+- elevation
+- soil (type and thickness)";"- topography
+- climate
+- hidrology
+- land use
+- demography
+- infrastructure";"For exposure estimation:
+- spatiotemporal concentration of pollutant (by R-LINE)
+- spatiotemporal location of individuals (by MATSim)
+
+";Land use, population demographics, emissions values, meteorology
+Submodels need;;;;;;"Submodels need:
+- (DaySim) demographics, land use and transport system characteristics
+- (MOVES) vehicles characteristics, distribution, volume and speed, meteorology, road network characteristics
+- (R-LINE) meteorology, road network characteristics, mobile source emissions
+- (MATSim) activity demand, network capacity and time constraint
+
+";
+Spatial resolution;Individual agents;Family unit;Household (survey);Depends on ELU (homogeneous modelling patches) ;A variations of parameters is generated from real case studies ranges;"Street level
+";"- land use/transportation: honogeneous zones
+- meteorological module: mesoscale 2x2 Km"
+Temporal resolution;;;;Depends on meteorological data;At 1 point in time;Hourly;photochemical airshed component: every hour
+Integration of Simulation;;;;;;;
+Sequential;;x;;ArcEGMO - GIS;x;x;
+Parallel;;;x;Parallel at ELU level;;;x
+Integration of Software;;;;;;;
+Supermodel approach;x;x;x;;x (as for the water infrastructure generation, after the urban form generation);;
+Interface approach;;;;;;x;x
+Hybrid;;;;x;x (water simulations are runned outside the framework on EPANET and SWMM);;
+Interaction;;;;;;;
+Convergence or interaction;;;;;x (middle results of urban form generations are not valids);x (DaySim optimize the activity choice);
+Temporal/Causation;x;x;;x;;x;x
+Outputs;;;;;;;
+Outputs/subcomponents;"Urban form, land use mix, density and travel patterns.
+
+Subcomponents:
+- cration or loss of household and jobs
+- movements of households or jobs within the region
+- location, type, and quantity of new construction and redevelopment by developers
+- price of land
+- movement of household or jobs within the region
+- accessibility by auto ownership";Synthetic population (status change in input data);"Resources demand: 
+- water
+- energy
+- food
+
+Waste production:
+- waste water
+- food waste";"- Load/discharge water balance
+- Efficiency factor for WWTP treatment";"- water distribution
+- water sewer";Exposure of individuals on average winter day;Emissions for different urban growth scenarios
