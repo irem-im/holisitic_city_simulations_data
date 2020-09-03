@@ -1,0 +1,12 @@
+;System of output;Built Domain;Mobility Network;Communication Network;Society;Water Cycle;Energy Cycle;Matter Cycle;Environment;Air;Nature
+System of input;;;;;;;;;;;
+Built Domain;;Built Domain data.;Land use-transport feedback cycle.;;Emplyment and housing location.;Soil drainage. Surface runoff.;Construction, mainteinance and demolishing of buildings. Heating, cooling, lighting, and operating of appliances of buildings (the operative use of the building).;Construction mainteinance and demolishing of buildings.;;Geometry and thermal properties of the urban canopy: closed volumes (buildings) and open volumes (canyons). Pollution sources.;Non-vegetated surfaces (for cooling effects of natural surfaces).
+Mobility Network;;Land use-transport feedback cycle.;Mobility Network data.;;Displacement for employment and housing activities.;;Transportation fuels. Construction, maintenance, and operation of the roads and infrastructure. ;Transport activity of goods and materials. Construction and maintenance of the roads and infrastructure. ;;Road-based traffic. Harbor activity.;
+Communication Network;;;Location and mobility data.;Communication Network data.;Semantic information from social media data.;;;;;;
+Society;;Employment and housing demand (space demand). Mobility and migrations.;Transport use and demand.;;Society data.;Water demand. Effects of polluted waters. Policies to limit water consumption.;Energy demand. Energy market. Policies to limit energy consumption.;Food demand. Transport activity.;;Sensitive population (children, pregnant women, etc.).;
+Water Cycle;;;;;Water pollution concentration.;Water Cycle data.;Water-Energy-Food nexus.;Water-Energy-Food nexus.;;Water bodies thermal properties.;Water bodies thermal properties (for cooling effects of natural surfaces).
+Energy Cycle;;;;;;Water-Energy-Food nexus.;Energy Cycle data.;Water-Energy-Food nexus.;;;
+Matter Cycle;;;Solid waste management and vehicle routing problems.;;;Runoff-picked trash and pollutants. Water-Energy-Food nexus.;Water-Energy-Food nexus.;Matter Cycle data.;;;
+Environment;;;;;;Precipitations. Atmospheric deposition. Ecological systems.;;;Environment data.;Climate and weather data.;
+Air;;Pollution concentration and distribution.;Pollution concentration and distribution.;;Pollution concentration and distribution.;;;;;Air data.;
+Nature;;;;;;;;;;Green canopy.;Nature data.
